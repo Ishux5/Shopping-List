@@ -1,0 +1,90 @@
+:root {
+    --backgroundColor: rgb(0, 162, 255);
+    --sLColor1: rgba(0, 162, 255, 0.3);
+    --sLColor2: rgba();
+}
+
+html {
+    width: 100vw;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+
+.input {
+    display: grid;
+    grid-template-areas:
+        "name amount type"
+        "notes notes notes"
+        "addItem addItem addItem";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+#itemName {
+    grid-area: name;
+}
+
+#itemAmount {
+    grid-area: amount;
+}
+
+#itemType {
+    grid-area: type;
+}
+
+#itemNotes {
+    grid-area: notes;
+    resize: none;
+}
+
+#addItem {
+    grid-area: addItem;
+}
+
+.shoppingList {
+    display: grid;
+    grid-template-areas: ". . . deleteItem";
+    grid-template-columns: 0.2fr 1.5fr 0.2fr 0.2fr;
+    align-items: center;
+}
+
+.sLIndex {
+    background-color: var(--backgroundColor);
+}
+
+.sL1 {
+    background-color: var(--sLColor1);
+}
+
+.sLIndexText {
+    margin: 10px 10px;
+}
+
+.textAlignCenter {
+    text-align: center;
+}
+
+.deleteItem {
+    grid-area: "deleteItem";
+    margin: auto;
+    text-align: center;
+}
+
+.deleteItemHover:hover {
+    cursor: pointer;
+}
